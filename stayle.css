@@ -1,0 +1,462 @@
+/* بدنه و فونت */
+
+@font-face {
+    font-family: 'iranian sans';
+    src: url(./font/Iranian\ Sans.ttf)
+    format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+    font-family: 'iranian sans';
+  margin: 0;
+  font-family: Tahoma, iranian-sans;
+  background: white;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+
+}
+
+/* هدر */
+header {
+  background-color: #fff;
+  box-shadow: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  direction: rtl;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* لوگو */
+.logo {
+  width: 120px;
+  height: 50px;
+  /* background-color: #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #555;
+  user-select: none;
+}
+
+/* منو اصلی */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* آیتم‌های منو */
+nav ul.menu > li {
+  position: relative;
+}
+
+/* لینک‌های منو */
+nav ul.menu > li > a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  display: inline-block;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* فلش کنار متن */
+nav ul.menu > li > a i {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* هاور لینک */
+nav ul.menu > li:hover > a {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* زیرمنو کشویی */
+nav ul.menu li ul.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 180px;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ظاهر شدن زیرمنو */
+nav ul.menu li:hover > ul.dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* آیتم‌های زیرمنو */
+nav ul.menu li ul.dropdown li a {
+  padding: 8px 15px;
+  display: block;
+  color: #333;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+/* هاور زیرمنو */
+nav ul.menu li ul.dropdown li a:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* ریسپانسیو ساده */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul.menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  nav ul.menu li ul.dropdown {
+    position: relative;
+    top: 0;
+    right: 0;
+    box-shadow: none;
+    border: none;
+  }
+  nav ul.menu li:hover > ul.dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.half-section {
+  display: flex;
+  width: 100%;
+  height: 500px; 
+  direction: ltr;
+  margin-top: 20px; */
+  /* flex-direction:row-reverse; */
+}
+
+.image-side, .green-side {
+  /* width: 50%; */
+  height: 100%;
+  flex: 1;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.green-side {
+  background-color: #28a745; /* سبز */
+}
+
+
+
+.green-side {
+   
+  /* background-color: #28a745;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;      
+  text-align: center;
+  height: 100vh;           
+  padding: 20px;
+  box-sizing: border-box; */
+
+  background-color: #28a745;
+  color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+
+  /* justify-content: center; */
+  /* height: 100%;
+  box-sizing: border-box; */
+}
+
+.text-container h1 {
+  font-size: 2.5rem; /* بزرگ */
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.text-container .subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.input-group {
+  display: flex;
+  gap: 6px;
+  width: 50%;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+/* .input-empty{
+    margin-top: 10px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 8px;
+    color: black;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+/* input[type="text"].empty-box{
+    margin-top: 10px;
+} */
+
+.full-width-input{
+    margin-top: 30px;
+    /* margin: 20px auto;
+    width: 70%;
+    display: block;
+    border: 1px solid black;
+    padding: 8px;
+    background: transparent;
+    box-sizing: border-box;
+    color: black;
+    outline: none; */
+
+}
+
+.input-group input[type="text"] {
+  flex: 1;
+  padding: 8px 5px;
+  border: none;
+  border-bottom: 1.5px solid black;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  /* border-radius: 4px; */
+}
+
+.input-group button {
+  padding: 8px 15px;
+  background: white;
+  color: #28a745;
+  border: none;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  font-weight: bold;
+  /* outline: none; */
+  /* border-bottom: 1.5rem solid; */
+  /* margin-top: 30px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 100%;
+  box-sizing: border-box;
+  
+}
+
+.full-width-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: transparent;
+  color: white;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+
+.full-width-input::placeholder {
+  color: #dcdcdc;
+}
+
+.gallery-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #fff; /* پس‌زمینه سفید */
+}
+
+.gallery-section img {
+  width: 11%;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 40px;
+  /* margin-right: 4%; */
+}
+
+@media (max-width: 768px) {
+  .gallery-section img {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-section img {
+    width: 100%;
+  }
+
+  /* ایکون کوچولو عکس */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.columns-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 30%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.text h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.text p {
+  margin: 3px 0 0 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .columns-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .column {
+    min-width: 100%;
+  }
+}
+
+/* عکس زیر ایکون */
+
+ .centered-image-wrapper {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+
+}
+
+/* بخش بعدی */
+    
+.container .row img {
+  /* background-color: rgba(0, 123, 255, 0.1);
+  padding: 10px; */
+  border-radius: 6px;
+  margin-top: -60px;
+  /*عکس‌ها30پیکسلمیرنبالا*/position: relative;
+  z-index: 2;
+  /*مطمئنمی‌شیمرویمتنباشن*/transition: margin-top 0.3s ease;
+  /*انیمیشننرم*//*display: inline-block;
+  */
+}
+
+.container .row img:hover {
+  margin-top: -70px; /* وقتی روش می‌ری موشو بیشتر بالا میره */
+  cursor: pointer;
+}
+
+/* ریسپانسیو */
+
+/* موبایل (صفحه کوچک) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+/* تبلت و لپ‌تاپ (صفحه متوسط) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
+/* دسکتاپ و تلویزیون (صفحه بزرگ) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding: 40px;
+  }
+}
